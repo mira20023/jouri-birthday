@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="ar" dir="rtl" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عيد ميلاد جوري 🎂</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&amp;family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet">
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+      font-family: 'Tajawal', sans-serif;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+    }
+    
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 10px 40px rgba(255, 192, 203, 0.3); }
+      50% { box-shadow: 0 10px 60px rgba(255, 192, 203, 0.5); }
+    }
+    
+    @keyframes confetti {
+      0% { transform: translateY(-100%) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100%) rotate(720deg); opacity: 0; }
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.15); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.15); }
+    }
+    
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-10deg); }
+      75% { transform: rotate(10deg); }
+    }
+    
+    @keyframes fadeInUp {
+      from { 
+        opacity: 0; 
+        transform: translateY(40px); 
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
+    }
+    
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+      50% { opacity: 1; transform: scale(1) rotate(180deg); }
+    }
+    
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      10% { transform: rotate(14deg); }
+      20% { transform: rotate(-8deg); }
+      30% { transform: rotate(14deg); }
+      40% { transform: rotate(-4deg); }
+      50% { transform: rotate(10deg); }
+      60% { transform: rotate(0deg); }
+      100% { transform: rotate(0deg); }
+    }
+    
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    @keyframes rotateIn {
+      from {
+        opacity: 0;
+        transform: rotate(-180deg) scale(0);
+      }
+      to {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      }
+    }
+    
+    @keyframes tada {
+      0% { transform: scale(1) rotate(0deg); }
+      10%, 20% { transform: scale(0.9) rotate(-3deg); }
+      30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg); }
+      40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); }
+      100% { transform: scale(1) rotate(0deg); }
+    }
+    
+    @keyframes jello {
+      0%, 100% { transform: skewX(0deg) skewY(0deg); }
+      30% { transform: skewX(25deg) skewY(25deg); }
+      40% { transform: skewX(-15deg) skewY(-15deg); }
+      50% { transform: skewX(15deg) skewY(15deg); }
+      65% { transform: skewX(-5deg) skewY(-5deg); }
+      75% { transform: skewX(5deg) skewY(5deg); }
+    }
+    
+    @keyframes rubberBand {
+      0% { transform: scale(1); }
+      30% { transform: scaleX(1.25) scaleY(0.75); }
+      40% { transform: scaleX(0.75) scaleY(1.25); }
+      50% { transform: scaleX(1.15) scaleY(0.85); }
+      65% { transform: scaleX(0.95) scaleY(1.05); }
+      75% { transform: scaleX(1.05) scaleY(0.95); }
+      100% { transform: scale(1); }
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    @keyframes envelopeZoom {
+      0% { 
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+      }
+      100% { 
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes envelopeOpen {
+      0% { 
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% { 
+        max-height: 600px;
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .float-animation {
+      animation: float 4s ease-in-out infinite;
+    }
+    
+    .pulse-glow {
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+    
+    .bounce-animation {
+      animation: bounce 2s ease-in-out infinite;
+    }
+    
+    .slide-up {
+      animation: slideUp 0.8s ease-out forwards;
+    }
+    
+    .heartbeat {
+      animation: heartbeat 1.8s ease-in-out infinite;
+    }
+    
+    .wiggle {
+      animation: wiggle 2s ease-in-out infinite;
+    }
+    
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    
+    .sparkle {
+      animation: sparkle 2s ease-in-out infinite;
+    }
+    
+    .wave {
+      animation: wave 2.5s ease-in-out infinite;
+      transform-origin: 70% 70%;
+    }
+    
+    .slide-in-left {
+      animation: slideInLeft 1s ease-out forwards;
+    }
+    
+    .slide-in-right {
+      animation: slideInRight 1s ease-out forwards;
+    }
+    
+    .scale-in {
+      animation: scaleIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    }
+    
+    .rotate-in {
+      animation: rotateIn 1s ease-out forwards;
+    }
+    
+    .tada {
+      animation: tada 1.5s ease-in-out infinite;
+    }
+    
+    .jello {
+      animation: jello 2s ease-in-out infinite;
+    }
+    
+    .rubber-band {
+      animation: rubberBand 2s ease-in-out infinite;
+    }
+    
+    .confetti-piece {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      top: -10px;
+      animation: confetti 4s linear forwards;
+      z-index: 1000;
+    }
+    
+    .envelope-card {
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      perspective: 1000px;
+    }
+    
+    .envelope-card:hover {
+      transform: translateY(-10px) scale(1.02);
+    }
+    
+    .envelope-card.opening {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1.5);
+      z-index: 1001;
+      animation: envelopeZoom 0.5s ease-out;
+      max-width: 600px;
+      width: 90%;
+    }
+    
+    .envelope-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    
+    .envelope-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    
+    .letter-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+    }
+    
+    .letter-open {
+      animation: envelopeOpen 0.6s ease-out forwards;
+      max-height: 600px;
+      opacity: 1;
+      padding: 24px;
+    }
+    
+    .drink-option {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .drink-option:hover {
+      transform: translateY(-8px);
+    }
+    
+    .screen {
+      display: none;
+      min-height: 100%;
+      width: 100%;
+    }
+    
+    .screen.active {
+      display: flex;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #fff5f7 0%, #ffe8f0 50%, #ffd9e8 100%);
+    }
+    
+    .cafe-bg {
+      background: linear-gradient(135deg, #fff0f5 0%, #ffe4ed 50%, #ffd9e8 100%);
+    }
+    
+    .cards-bg {
+      background: linear-gradient(135deg, #fef5f8 0%, #fff0f5 50%, #ffe8f2 100%);
+    }
+    
+    .final-bg {
+      background: linear-gradient(135deg, #fff5f7 0%, #ffe8f0 50%, #ffd9e8 100%);
+    }
+    
+    .shimmer-text {
+      background: linear-gradient(90deg, #ff69b4 0%, #ffc0cb 50%, #ff69b4 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s linear infinite;
+    }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .cloud-bubble {
+      border-radius: 50% 50% 50% 0%;
+      position: relative;
+    }
+    
+    .cloud-bubble::before {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 20%;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .cloud-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: -35px;
+      left: 15%;
+      width: 25px;
+      height: 25px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full w-full overflow-auto">
+  <div id="app" class="h-full w-full"><!-- Language Toggle Button --> <button onclick="toggleLanguage()" class="fixed top-6 right-6 z-50 bg-white/90 backdrop-blur-sm hover:bg-white text-pink-600 font-bold py-3 px-6 rounded-full shadow-xl transform hover:scale-105 transition-all border-2 border-pink-200 scale-in"> <span id="lang-button-text">🇹🇷 Türkçe</span> </button> <!-- Screen 1: Welcome -->
+   <div id="screen1" class="screen active gradient-bg flex-col items-center justify-center p-8 text-center">
+    <div class="max-w-lg mx-auto"><!-- Animated Teddy Bear GIF -->
+     <div class="float-animation mb-8">
+      <div class="w-56 h-64 mx-auto drop-shadow-2xl bg-transparent rounded-3xl flex items-center justify-center"><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWhwaWZwMXdjcTU0bXNnMmJsemExdHFvcnFlM2RqeWU4N3Zia3drOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ie4CIIvQS0bk3zwZlM/giphy.gif" alt="دبدوب لطيف متحرك" class="w-full h-full object-contain" style="filter: drop-shadow(0 10px 30px rgba(255, 105, 180, 0.3));" onerror="this.src=''; this.alt='فشل تحميل الصورة'; this.style.display='none';">
+      </div>
+     </div>
+     <div class="relative mb-8 fade-in-up"><!-- Cloud Speech Bubble -->
+      <div class="cloud-bubble glass-card rounded-full p-8 shadow-2xl pulse-glow relative">
+       <p class="text-2xl font-bold text-pink-600 leading-relaxed shimmer-text" id="welcome-text">مرحباً بك جوري الحلوة! 🌹<br>
+         أنا دبدوب عيد الميلاد<br>
+         صُنعت خصيصاً من أجلك! 💝</p>
+      </div>
+     </div><button onclick="goToScreen(2)" id="screen1-button" class="bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-bold py-4 px-10 rounded-full text-xl shadow-xl transform hover:scale-105 transition-all"> ابدئي الجولة ✨ </button>
+    </div><!-- Animated Party Elements with Various Animations -->
+    <div class="absolute top-10 left-10 text-5xl heartbeat">
+     🎈
+    </div>
+    <div class="absolute top-20 right-10 text-4xl wiggle" style="animation-delay: 0.5s;">
+     🎀
+    </div>
+    <div class="absolute bottom-20 left-20 text-4xl sparkle" style="animation-delay: 1s;">
+     ⭐
+    </div>
+    <div class="absolute bottom-10 right-20 text-5xl wave" style="animation-delay: 0.3s;">
+     🎁
+    </div>
+    <div class="absolute top-32 left-32 text-3xl tada" style="animation-delay: 0.7s;">
+     🎊
+    </div>
+    <div class="absolute top-40 right-32 text-3xl jello" style="animation-delay: 1.2s;">
+     🎉
+    </div>
+    <div class="absolute bottom-32 left-40 text-3xl rubber-band" style="animation-delay: 0.4s;">
+     🌟
+    </div>
+    <div class="absolute bottom-40 right-40 text-3xl bounce-animation" style="animation-delay: 0.9s;">
+     💫
+    </div><!-- More Floating Elements -->
+    <div class="absolute top-16 left-1/4 text-2xl rotate-in" style="animation-delay: 0.2s;">
+     🎊
+    </div>
+    <div class="absolute top-24 right-1/4 text-2xl scale-in" style="animation-delay: 0.6s;">
+     🎉
+    </div>
+    <div class="absolute bottom-24 left-1/3 text-2xl slide-in-left" style="animation-delay: 0.8s;">
+     ✨
+    </div>
+    <div class="absolute bottom-16 right-1/3 text-2xl slide-in-right" style="animation-delay: 1s;">
+     🎈
+    </div>
+   </div><!-- Screen 2: Let's go -->
+   <div id="screen2" class="screen gradient-bg flex-col items-center justify-center p-8 text-center">
+    <div class="max-w-lg mx-auto">
+     <div class="float-animation mb-8">
+      <div class="w-56 h-64 mx-auto drop-shadow-2xl bg-transparent rounded-3xl flex items-center justify-center"><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWc1bGVvc2w4b2dqNmRzdHU1ZDRhN2wyZGUyYjdlejdydHFtOHhmMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SYo1DFS8NLhhqzzjMU/giphy.gif" alt="دبدوب لطيف متحرك" class="w-full h-full object-contain" style="filter: drop-shadow(0 10px 30px rgba(255, 105, 180, 0.3));" onerror="this.src=''; this.alt='فشل تحميل الصورة'; this.style.display='none';">
+      </div>
+     </div>
+     <div class="glass-card rounded-3xl p-8 shadow-2xl pulse-glow relative mb-8 fade-in-up">
+      <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[16px] border-r-[16px] border-b-[16px] border-transparent border-b-white/85"></div>
+      <p class="text-xl font-bold text-pink-600 leading-relaxed" id="screen2-text">سوف نذهب بجولة إلى مقهى<br>
+        صُنع خصيصاً لك! ☕💕<br>
+        استعدي للمغامرة!</p>
+     </div><button onclick="goToScreen(3)" id="screen2-button" class="bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-bold py-4 px-10 rounded-full text-xl shadow-xl transform hover:scale-105 transition-all"> هيا نذهب جوري! 🚀 </button>
+    </div><!-- Animated decorations -->
+    <div class="absolute top-10 right-10 text-4xl wiggle">
+     🚀
+    </div>
+    <div class="absolute top-20 left-10 text-4xl heartbeat">
+     ☕
+    </div>
+    <div class="absolute bottom-20 right-20 text-4xl tada">
+     💕
+    </div>
+    <div class="absolute bottom-10 left-20 text-4xl jello">
+     ✨
+    </div>
+   </div><!-- Screen 3: Cafe -->
+   <div id="screen3" class="screen cafe-bg flex-col items-center justify-center p-8 text-center">
+    <div class="max-w-2xl mx-auto">
+     <div class="mb-6 scale-in">
+      <h1 class="text-5xl font-bold text-pink-600 mb-3 shimmer-text" id="screen3-title">مقهى جوري</h1>
+      <p class="text-pink-500 text-lg font-semibold" id="screen3-subtitle">Jouri's Café ☕</p>
+     </div>
+     <div class="float-animation mb-6">
+      <div class="w-56 h-64 mx-auto drop-shadow-2xl bg-transparent rounded-3xl flex items-center justify-center"><img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3lxbTYyMDJ6cjFkdTgwYWtseGFicWN2dWF4NzlmY3pvY3R1NjZqMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KxcLYdJ6dHebBy7ApL/giphy.gif" alt="دبدوب القهوة اللطيف" class="w-full h-full object-contain" style="filter: drop-shadow(0 10px 30px rgba(255, 105, 180, 0.3));" onerror="this.src=''; this.alt='فشل تحميل الصورة'; this.style.display='none';">
+      </div>
+     </div>
+     <div class="glass-card rounded-3xl p-6 shadow-xl relative mb-8 fade-in-up">
+      <p class="text-xl font-bold text-pink-600 leading-relaxed" id="screen3-welcome">أهلاً بك في مقهى جوري! 🎉<br>
+        اختاري مشروبك المفضل 💕</p>
+     </div>
+     <div class="grid grid-cols-3 gap-6 mb-6"><button onclick="selectDrink('شاي')" class="drink-option glass-card rounded-3xl p-6 shadow-xl hover:shadow-2xl scale-in" style="animation-delay: 0.1s;">
+       <div class="text-6xl mb-3 bounce-animation">
+        🍵
+       </div><p class="font-bold text-pink-600 text-lg" id="screen3-tea">شاي</p><p class="text-sm text-pink-400" id="screen3-tea-sub">Çay</p></button> <button onclick="selectDrink('قهوة')" class="drink-option glass-card rounded-3xl p-6 shadow-xl hover:shadow-2xl scale-in" style="animation-delay: 0.2s;">
+       <div class="text-6xl mb-3 heartbeat">
+        ☕
+       </div><p class="font-bold text-pink-600 text-lg" id="screen3-coffee">قهوة</p><p class="text-sm text-pink-400" id="screen3-coffee-sub">Kahve</p></button> <button onclick="selectDrink('ماتشا')" class="drink-option glass-card rounded-3xl p-6 shadow-xl hover:shadow-2xl scale-in" style="animation-delay: 0.3s;">
+       <div class="text-6xl mb-3 wiggle">
+        🍵
+       </div><p class="font-bold text-pink-600 text-lg" id="screen3-matcha">ماتشا</p><p class="text-sm text-pink-400" id="screen3-matcha-sub">Matcha</p></button>
+     </div>
+     <div id="selected-drink" class="hidden">
+      <div class="glass-card rounded-2xl p-5 mb-6 slide-up shadow-lg">
+       <p class="text-xl text-pink-600 font-bold"><span id="screen3-selected-label">اخترتِ:</span> <span id="drink-name"></span> 💕</p>
+      </div><button onclick="goToScreen(4)" id="screen3-button" class="bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-bold py-4 px-10 rounded-full text-xl shadow-xl transform hover:scale-105 transition-all"> التالي ✨ </button>
+     </div>
+    </div><!-- Coffee shop decorations -->
+    <div class="absolute top-10 left-10 text-4xl sparkle">
+     ☕
+    </div>
+    <div class="absolute top-20 right-10 text-3xl wave">
+     🧁
+    </div>
+    <div class="absolute bottom-20 left-20 text-3xl heartbeat">
+     🍰
+    </div>
+    <div class="absolute bottom-10 right-20 text-4xl wiggle">
+     🥐
+    </div>
+   </div><!-- Screen 4: Going to cards -->
+   <div id="screen4" class="screen gradient-bg flex-col items-center justify-center p-8 text-center">
+    <div class="max-w-lg mx-auto">
+     <div class="float-animation mb-8">
+      <div class="w-56 h-64 mx-auto drop-shadow-2xl bg-transparent rounded-3xl flex items-center justify-center"><img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHUzNHZuemE4YWFzYXRpMXJzMnQ1N2UzNDRjajZxem5uMGtzcXc0ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EdzomRSbUboFeiGtM5/giphy.gif" alt="دبدوب لطيف متحرك" class="w-full h-full object-contain" style="filter: drop-shadow(0 10px 30px rgba(255, 105, 180, 0.3));" onerror="this.src=''; this.alt='فشل تحميل الصورة'; this.style.display='none';">
+      </div>
+     </div>
+     <div class="glass-card rounded-3xl p-8 shadow-2xl pulse-glow relative mb-8 fade-in-up">
+      <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[16px] border-r-[16px] border-b-[16px] border-transparent border-b-white/85"></div>
+      <p class="text-xl font-bold text-pink-600 leading-relaxed" id="screen4-text">ممتاز! الآن اخترتِ مشروبك 🥰<br>
+        دعينا نذهب لقراءة رسائل<br>
+        الأصدقاء الذين يحبونك! 💌</p>
+     </div><button onclick="goToScreen(5)" id="screen4-button" class="bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-bold py-4 px-10 rounded-full text-xl shadow-xl transform hover:scale-105 transition-all"> هيا نستكشف التهاني! 💝 </button>
+    </div><!-- Letter decorations -->
+    <div class="absolute top-10 right-10 text-5xl heartbeat">
+     💌
+    </div>
+    <div class="absolute top-20 left-10 text-4xl wiggle">
+     💝
+    </div>
+    <div class="absolute bottom-20 right-20 text-4xl wave">
+     💕
+    </div>
+    <div class="absolute bottom-10 left-20 text-5xl bounce-animation">
+     💖
+    </div>
+   </div><!-- Screen 5: Envelopes -->
+   <div id="screen5" class="screen cards-bg flex-col items-center p-8 overflow-y-auto">
+    <div class="envelope-overlay" id="envelopeOverlay" onclick="closeEnvelope()"></div>
+    <div class="max-w-5xl mx-auto w-full py-6">
+     <h1 class="text-4xl font-bold text-pink-600 text-center mb-4 shimmer-text scale-in" id="screen5-title">رسائل الأحباب 💌</h1>
+     <p class="text-center text-pink-500 mb-10 text-lg fade-in-up" id="screen5-subtitle">اضغطي على الأظرف لقراءة الرسائل</p>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8"><!-- Envelope 1 - Emrah -->
+      <div class="envelope-card glass-card rounded-3xl p-6 shadow-xl rotate-in" style="animation-delay: 0.1s;" onclick="openEnvelope(1)">
+       <div class="text-center mb-4">
+        <div class="relative mx-auto w-40 h-32 mb-4">
+         <svg viewbox="0 0 160 120" class="w-full h-full drop-shadow-xl"><rect x="10" y="30" width="140" height="80" fill="#ffc0cb" rx="4" /> <rect x="10" y="30" width="140" height="80" fill="url(#gradient1)" rx="4" opacity="0.3" /> <ellipse cx="80" cy="110" rx="60" ry="5" fill="#000" opacity="0.1" /> <path d="M 10 30 L 80 75 L 150 30" fill="#ffb6c1" stroke="#ff69b4" stroke-width="1.5" /> <path d="M 10 30 L 10 110 L 80 75 Z" fill="#ffb0c8" opacity="0.5" /> <path d="M 150 30 L 150 110 L 80 75 Z" fill="#ffa6c0" opacity="0.5" /> <circle cx="80" cy="65" r="12" fill="#ff69b4" /> <text x="80" y="72" text-anchor="middle" font-size="14" fill="white">
+           ❤️
+          </text> <circle cx="30" cy="90" r="2" fill="#ff69b4" opacity="0.6" /> <circle cx="130" cy="90" r="2" fill="#ff69b4" opacity="0.6" /> <circle cx="80" cy="100" r="2" fill="#ff69b4" opacity="0.6" /> <defs>
+           <lineargradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fff;stop-opacity:0.5" />
+            <stop offset="100%" style="stop-color:#ff69b4;stop-opacity:0.2" />
+           </lineargradient>
+          </defs>
+         </svg>
+        </div>
+        <p class="text-pink-600 font-bold text-xl mb-1 envelope-from" data-sender="Emrah">من Emrah</p>
+        <p class="text-pink-400 text-sm envelope-click">اضغطي لقراءة الرسالة 💌</p>
+       </div>
+       <div id="letter1" class="letter-content bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl mt-4 text-right text-gray-700 text-sm leading-relaxed border-2 border-pink-100 shadow-inner">
+        <p class="font-bold text-pink-600 mb-4 text-lg">💕 رسالة من Emrah:</p>
+        <p dir="ltr" class="text-left">Bugün senin doğum günün ve ben seni ne kadar sevdiğimi bir güne sığdırmanın mümkün olmadığını biliyorum. Ama yine de bunu sana yazmak istedim. Çünkü içimde biriken duyguları sana söylemeden duramıyorum. <br><br>
+          Seni çok seviyorum. Bunu söylerken tek bir an bile tereddüt etmiyorum. Hayatıma girdiğin günden beri içimde bir yer var, sadece sana ait. Yanımdayken tamamlanıyorum, uzaktayken bile seni hissediyorum. <br><br>
+          Gülüşün bana iyi geliyor, sesin içimi sakinleştiriyor, varlığın bana güç veriyor. Sen benim için sadece sevdiğim biri değil, aynı zamanda en yakınım, en güvendiğim yerimsin. <br><br>
+          Yeni yaşında da elimi hiç bırakma. Birlikte gülelim, birlikte büyüyelim, birlikte çoğalalım. Ben seni bugün daha çok seviyorum, yarın bundan da fazla seveceğim. <br><br>
+          İyi ki doğdun aşkım.<br>
+          İyi ki benimsin. ❤️</p>
+       </div>
+      </div><!-- Envelope 2 - Nada -->
+      <div class="envelope-card glass-card rounded-3xl p-6 shadow-xl rotate-in" style="animation-delay: 0.2s;" onclick="openEnvelope(2)">
+       <div class="text-center mb-4">
+        <div class="relative mx-auto w-40 h-32 mb-4">
+         <svg viewbox="0 0 160 120" class="w-full h-full drop-shadow-xl"><rect x="10" y="30" width="140" height="80" fill="#ffb3d9" rx="4" /> <rect x="10" y="30" width="140" height="80" fill="url(#gradient2)" rx="4" opacity="0.3" /> <ellipse cx="80" cy="110" rx="60" ry="5" fill="#000" opacity="0.1" /> <path d="M 10 30 L 80 75 L 150 30" fill="#ffa0cc" stroke="#ff1493" stroke-width="1.5" /> <path d="M 10 30 L 10 110 L 80 75 Z" fill="#ff99cc" opacity="0.5" /> <path d="M 150 30 L 150 110 L 80 75 Z" fill="#ff8fbf" opacity="0.5" /> <circle cx="80" cy="65" r="12" fill="#ff1493" /> <text x="80" y="72" text-anchor="middle" font-size="14" fill="white">
+           💕
+          </text> <circle cx="30" cy="90" r="2" fill="#ff1493" opacity="0.6" /> <circle cx="130" cy="90" r="2" fill="#ff1493" opacity="0.6" /> <circle cx="80" cy="100" r="2" fill="#ff1493" opacity="0.6" /> <defs>
+           <lineargradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fff;stop-opacity:0.5" />
+            <stop offset="100%" style="stop-color:#ff1493;stop-opacity:0.2" />
+           </lineargradient>
+          </defs>
+         </svg>
+        </div>
+        <p class="text-pink-600 font-bold text-xl mb-1 envelope-from" data-sender="ندى">من ندى</p>
+        <p class="text-pink-400 text-sm envelope-click">اضغطي لقراءة الرسالة 💌</p>
+       </div>
+       <div id="letter2" class="letter-content bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl mt-4 text-right text-gray-700 text-sm leading-relaxed border-2 border-pink-100 shadow-inner">
+        <p class="font-bold text-purple-600 mb-4 text-lg">💕 رسالة من ندى:</p>
+        <p>يارب في يوم ميلاد صديقتي أغرق قلبها فرحاً وسعادة وبحراً من الرضا والتيسير وكن لها الأمان والطمأنينة في عامها الجديد. <br><br>
+          كنتِ أجمل الصدف التي جمعتني بها الأيام وخير صديقة بل الأفضل، لستُ معك الآن ولكن تأكدي أنك في قلبي دائماً لن أنساك ما حييت.. <br><br>
+          صديقتك وأختك ندى 💜</p>
+       </div>
+      </div><!-- Envelope 3 - Mira -->
+      <div class="envelope-card glass-card rounded-3xl p-6 shadow-xl rotate-in" style="animation-delay: 0.3s;" onclick="openEnvelope(3)">
+       <div class="text-center mb-4">
+        <div class="relative mx-auto w-40 h-32 mb-4">
+         <svg viewbox="0 0 160 120" class="w-full h-full drop-shadow-xl"><rect x="10" y="30" width="140" height="80" fill="#ffc4dd" rx="4" /> <rect x="10" y="30" width="140" height="80" fill="url(#gradient3)" rx="4" opacity="0.3" /> <ellipse cx="80" cy="110" rx="60" ry="5" fill="#000" opacity="0.1" /> <path d="M 10 30 L 80 75 L 150 30" fill="#ffb0d0" stroke="#ff69b4" stroke-width="1.5" /> <path d="M 10 30 L 10 110 L 80 75 Z" fill="#ffa6ca" opacity="0.5" /> <path d="M 150 30 L 150 110 L 80 75 Z" fill="#ff99c4" opacity="0.5" /> <circle cx="80" cy="65" r="12" fill="#ff69b4" /> <text x="80" y="72" text-anchor="middle" font-size="14" fill="white">
+           🌸
+          </text> <circle cx="30" cy="90" r="2" fill="#ff69b4" opacity="0.6" /> <circle cx="130" cy="90" r="2" fill="#ff69b4" opacity="0.6" /> <circle cx="80" cy="100" r="2" fill="#ff69b4" opacity="0.6" /> <defs>
+           <lineargradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fff;stop-opacity:0.5" />
+            <stop offset="100%" style="stop-color:#ff69b4;stop-opacity:0.2" />
+           </lineargradient>
+          </defs>
+         </svg>
+        </div>
+        <p class="text-pink-600 font-bold text-xl mb-1 envelope-from" data-sender="ميرا">من ميرا</p>
+        <p class="text-pink-400 text-sm envelope-click">اضغطي لقراءة الرسالة 💌</p>
+       </div>
+       <div id="letter3" class="letter-content bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl mt-4 text-right text-gray-700 text-sm leading-relaxed border-2 border-pink-100 shadow-inner">
+        <p class="font-bold text-pink-600 mb-4 text-lg">💕 رسالة من ميرا:</p>
+        <p>مرحبا ياحلوةةةة كيفكككك 😭 <br><br>
+          اول شي كل عام وانتيييي بخيررررر يااحلى حدا تعرفت عليه ويا احلى شخص تعرفت عليه الله يخليكي اياكي وما يحرمني منككك وتضلي معي على طولللللل ويجمعني فيكييييي فييككك احلى مين كبر سنة 🥹🥹🥹❤️❤️❤️ <br><br>
+          لوف يووو وايامك ان شاءالله فرح وسعادة يارب 💕</p>
+       </div>
+      </div><!-- Envelope 4 - Miral -->
+      <div class="envelope-card glass-card rounded-3xl p-6 shadow-xl rotate-in" style="animation-delay: 0.4s;" onclick="openEnvelope(4)">
+       <div class="text-center mb-4">
+        <div class="relative mx-auto w-40 h-32 mb-4">
+         <svg viewbox="0 0 160 120" class="w-full h-full drop-shadow-xl"><rect x="10" y="30" width="140" height="80" fill="#ffd4e5" rx="4" /> <rect x="10" y="30" width="140" height="80" fill="url(#gradient4)" rx="4" opacity="0.3" /> <ellipse cx="80" cy="110" rx="60" ry="5" fill="#000" opacity="0.1" /> <path d="M 10 30 L 80 75 L 150 30" fill="#ffc0d8" stroke="#ffb6c1" stroke-width="1.5" /> <path d="M 10 30 L 10 110 L 80 75 Z" fill="#ffb3d2" opacity="0.5" /> <path d="M 150 30 L 150 110 L 80 75 Z" fill="#ffa6cc" opacity="0.5" /> <circle cx="80" cy="65" r="12" fill="#ffb6c1" /> <text x="80" y="72" text-anchor="middle" font-size="14" fill="white">
+           🎀
+          </text> <circle cx="30" cy="90" r="2" fill="#ffb6c1" opacity="0.6" /> <circle cx="130" cy="90" r="2" fill="#ffb6c1" opacity="0.6" /> <circle cx="80" cy="100" r="2" fill="#ffb6c1" opacity="0.6" /> <defs>
+           <lineargradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fff;stop-opacity:0.5" />
+            <stop offset="100%" style="stop-color:#ffb6c1;stop-opacity:0.2" />
+           </lineargradient>
+          </defs>
+         </svg>
+        </div>
+        <p class="text-pink-600 font-bold text-xl mb-1 envelope-from" data-sender="ميرال">من ميرال</p>
+        <p class="text-pink-400 text-sm envelope-click">اضغطي لقراءة الرسالة 💌</p>
+       </div>
+       <div id="letter4" class="letter-content bg-gradient-to-br from-orange-50 to-pink-50 rounded-2xl mt-4 text-right text-gray-700 text-sm leading-relaxed border-2 border-pink-100 shadow-inner">
+        <p class="font-bold text-orange-500 mb-4 text-lg">💕 رسالة من ميرال:</p>
+        <p>كل عام وانتي بخير سنة سعيدة عليكي يارب.. 🎂🎉 <br><br>
+          عقبال مليون سنة يا احلى جوري! 💖</p>
+       </div>
+      </div><!-- Envelope 5 - Adi -->
+      <div class="envelope-card glass-card rounded-3xl p-6 shadow-xl rotate-in" style="animation-delay: 0.5s;" onclick="openEnvelope(5)">
+       <div class="text-center mb-4">
+        <div class="relative mx-auto w-40 h-32 mb-4">
+         <svg viewbox="0 0 160 120" class="w-full h-full drop-shadow-xl"><rect x="10" y="30" width="140" height="80" fill="#e0b0ff" rx="4" /> <rect x="10" y="30" width="140" height="80" fill="url(#gradient5)" rx="4" opacity="0.3" /> <ellipse cx="80" cy="110" rx="60" ry="5" fill="#000" opacity="0.1" /> <path d="M 10 30 L 80 75 L 150 30" fill="#d09eff" stroke="#c77dff" stroke-width="1.5" /> <path d="M 10 30 L 10 110 L 80 75 Z" fill="#c99aff" opacity="0.5" /> <path d="M 150 30 L 150 110 L 80 75 Z" fill="#c088ff" opacity="0.5" /> <circle cx="80" cy="65" r="12" fill="#c77dff" /> <text x="80" y="72" text-anchor="middle" font-size="14" fill="white">
+           💜
+          </text> <circle cx="30" cy="90" r="2" fill="#c77dff" opacity="0.6" /> <circle cx="130" cy="90" r="2" fill="#c77dff" opacity="0.6" /> <circle cx="80" cy="100" r="2" fill="#c77dff" opacity="0.6" /> <defs>
+           <lineargradient id="gradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fff;stop-opacity:0.5" />
+            <stop offset="100%" style="stop-color:#c77dff;stop-opacity:0.2" />
+           </lineargradient>
+          </defs>
+         </svg>
+        </div>
+        <p class="text-pink-600 font-bold text-xl mb-1 envelope-from" data-sender="عدي">من عدي</p>
+        <p class="text-pink-400 text-sm envelope-click">اضغطي لقراءة الرسالة 💌</p>
+       </div>
+       <div id="letter5" class="letter-content bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl mt-4 text-right text-gray-700 text-sm leading-relaxed border-2 border-pink-100 shadow-inner">
+        <p class="font-bold text-purple-600 mb-4 text-lg">💕 رسالة من عدي:</p>
+        <p>كل عام وانتي بخير يا اغلى جوري🌹🌹 بالدنيااااا <br><br>
+          🥳🥳🥳🎉🎉🎉🥳🎉🎉🥳🎉🥳🎉🥳🎉🥳🎉🥳🎉🥳🎉🎉🎉🎊🎊🎊🎊🎊🥳🎉🎉🥳🎊🎉🥳🎊🥳🎊</p>
+       </div>
+      </div><!-- Envelope 6 - Reem -->
+      <div class="envelope-card glass-card rounded-3xl p-6 shadow-xl rotate-in" style="animation-delay: 0.6s;" onclick="openEnvelope(6)">
+       <div class="text-center mb-4">
+        <div class="relative mx-auto w-40 h-32 mb-4">
+         <svg viewbox="0 0 160 120" class="w-full h-full drop-shadow-xl"><rect x="10" y="30" width="140" height="80" fill="#ffe4f0" rx="4" /> <rect x="10" y="30" width="140" height="80" fill="url(#gradient6)" rx="4" opacity="0.3" /> <ellipse cx="80" cy="110" rx="60" ry="5" fill="#000" opacity="0.1" /> <path d="M 10 30 L 80 75 L 150 30" fill="#ffd0e5" stroke="#ff8fc7" stroke-width="1.5" /> <path d="M 10 30 L 10 110 L 80 75 Z" fill="#ffc4df" opacity="0.5" /> <path d="M 150 30 L 150 110 L 80 75 Z" fill="#ffb8d9" opacity="0.5" /> <circle cx="80" cy="65" r="12" fill="#ff8fc7" /> <text x="80" y="72" text-anchor="middle" font-size="14" fill="white">
+           🌙
+          </text> <circle cx="30" cy="90" r="2" fill="#ff8fc7" opacity="0.6" /> <circle cx="130" cy="90" r="2" fill="#ff8fc7" opacity="0.6" /> <circle cx="80" cy="100" r="2" fill="#ff8fc7" opacity="0.6" /> <defs>
+           <lineargradient id="gradient6" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fff;stop-opacity:0.5" />
+            <stop offset="100%" style="stop-color:#ff8fc7;stop-opacity:0.2" />
+           </lineargradient>
+          </defs>
+         </svg>
+        </div>
+        <p class="text-pink-600 font-bold text-xl mb-1 envelope-from" data-sender="ريم">من ريم</p>
+        <p class="text-pink-400 text-sm envelope-click">اضغطي لقراءة الرسالة 💌</p>
+       </div>
+       <div id="letter6" class="letter-content bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl mt-4 text-right text-gray-700 text-sm leading-relaxed border-2 border-pink-100 shadow-inner">
+        <p class="font-bold text-pink-600 mb-4 text-lg">💕 رسالة من ريم:</p>
+        <p>عيد ميلاد سعيد يا قمر 🌙🎂 <br><br>
+          كل عام وأنتِ أقرب لقلبي، وأغلى صديقة، وأجمل روح عرفتها 💕🎉 <br><br>
+          عسى سنينك الجاية كلها نجاح وحب وخير يا جوري ✨🌸</p>
+       </div>
+      </div>
+     </div>
+     <div class="text-center pt-4"><button onclick="goToScreen(6)" id="screen5-button" class="bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-bold py-4 px-10 rounded-full text-xl shadow-xl transform hover:scale-105 transition-all"> التالي ✨ </button>
+     </div>
+    </div><!-- Floating decorations -->
+    <div class="absolute top-10 left-10 text-4xl sparkle">
+     💌
+    </div>
+    <div class="absolute top-20 right-10 text-3xl heartbeat">
+     💝
+    </div>
+    <div class="absolute bottom-20 left-20 text-3xl wiggle">
+     💕
+    </div>
+    <div class="absolute bottom-40 right-20 text-4xl wave">
+     💖
+    </div>
+   </div><!-- Screen 6: Final -->
+   <div id="screen6" class="screen final-bg flex-col items-center justify-center p-8 text-center">
+    <div class="max-w-lg mx-auto">
+     <div id="confetti-container"></div>
+     <div class="float-animation mb-8">
+      <div class="w-56 h-64 mx-auto drop-shadow-2xl bg-transparent rounded-3xl flex items-center justify-center"><img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTEycHhvbHl4aGV0aXByMTQ2cDRha3JtNnIwMzJ0YzlzMDA5dGFmdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KmxmoHUGPDjfQXqGgv/giphy.gif" alt="دبدوب احتفالي متحرك" class="w-full h-full object-contain" style="filter: drop-shadow(0 10px 30px rgba(255, 105, 180, 0.3));" onerror="this.src=''; this.alt='فشل تحميل الصورة'; this.style.display='none';">
+      </div>
+     </div>
+     <div class="glass-card rounded-3xl p-10 shadow-2xl pulse-glow relative mb-8 scale-in">
+      <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[16px] border-r-[16px] border-b-[16px] border-transparent border-b-white/85"></div>
+      <p class="text-2xl font-bold text-pink-600 leading-relaxed mb-5" id="screen6-text1">هذه كانت رسائل أحبابك يا جوري! 🎁</p>
+      <p class="text-lg text-rose-500 leading-relaxed mb-5" id="screen6-text2">وبمناسبة هذا اليوم الجميل<br>
+        أنا أيضاً أقدم لك أحلى التهاني<br>
+        ليوم ميلادك الحلو مثلك تماماً! 🌸💝</p>
+      <div class="text-4xl mb-5 heartbeat">
+       🎂🎉🎈✨
+      </div>
+      <p class="text-lg font-bold text-purple-500" id="screen6-text3">نختتم احتفالك الآن...<br>
+        وإلى اللقاء في عيد ميلادك القادم! 💫</p>
+     </div>
+     <div class="text-7xl heartbeat mb-6">
+      🎂
+     </div>
+     <h1 class="text-5xl font-bold mb-4 shimmer-text fade-in-up" id="screen6-title">كل عام وأنتِ بخير جوري!</h1>
+     <p class="text-2xl text-pink-500 font-semibold fade-in-up" id="screen6-subtitle">İyi ki doğdun Jouri! 💕</p><button onclick="restartJourney()" id="screen6-button" class="mt-10 bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition-all"> إعادة الجولة من البداية 🔄 </button>
+    </div><!-- Final decorations -->
+    <div class="absolute top-10 left-10 text-5xl heartbeat">
+     🎉
+    </div>
+    <div class="absolute top-20 right-10 text-4xl wiggle">
+     🎊
+    </div>
+    <div class="absolute bottom-20 left-20 text-4xl sparkle">
+     ⭐
+    </div>
+    <div class="absolute bottom-10 right-20 text-5xl wave">
+     🎈
+    </div>
+    <div class="absolute top-32 left-32 text-3xl tada">
+     🎀
+    </div>
+    <div class="absolute top-40 right-32 text-3xl jello">
+     ✨
+    </div>
+    <div class="absolute bottom-32 left-40 text-3xl rubber-band">
+     💖
+    </div>
+    <div class="absolute bottom-40 right-40 text-3xl bounce-animation">
+     💝
+    </div>
+   </div>
+  </div>
+  <script>
+    const defaultConfig = {
+      birthday_name: 'جوري'
+    };
+    
+    let config = { ...defaultConfig };
+    let currentLang = 'ar';
+    
+    const translations = {
+      ar: {
+        langButtonText: '🇹🇷 Türkçe',
+        screen1_welcome: 'مرحباً بك {name} الحلوة! 🌹<br>أنا دبدوب عيد الميلاد<br>صُنعت خصيصاً من أجلك! 💝',
+        screen1_button: 'ابدئي الجولة ✨',
+        screen2_text: 'سوف نذهب بجولة إلى مقهى<br>صُنع خصيصاً لك! ☕💕<br>استعدي للمغامرة!',
+        screen2_button: 'هيا نذهب جوري! 🚀',
+        screen3_title: 'مقهى جوري',
+        screen3_subtitle: "Jouri's Café ☕",
+        screen3_welcome: 'أهلاً بك في مقهى جوري! 🎉<br>اختاري مشروبك المفضل 💕',
+        screen3_tea: 'شاي',
+        screen3_coffee: 'قهوة',
+        screen3_matcha: 'ماتشا',
+        screen3_tea_sub: 'Çay',
+        screen3_coffee_sub: 'Kahve',
+        screen3_matcha_sub: 'Matcha',
+        screen3_selected: 'اخترتِ:',
+        screen3_button: 'التالي ✨',
+        screen4_text: 'ممتاز! الآن اخترتِ مشروبك 🥰<br>دعينا نذهب لقراءة رسائل<br>الأصدقاء الذين يحبونك! 💌',
+        screen4_button: 'هيا نستكشف التهاني! 💝',
+        screen5_title: 'رسائل الأحباب 💌',
+        screen5_subtitle: 'اضغطي على الأظرف لقراءة الرسائل',
+        screen5_from: 'من',
+        screen5_click: 'اضغطي لقراءة الرسالة 💌',
+        screen5_button: 'التالي ✨',
+        screen6_text1: 'هذه كانت رسائل أحبابك يا جوري! 🎁',
+        screen6_text2: 'وبمناسبة هذا اليوم الجميل<br>أنا أيضاً أقدم لك أحلى التهاني<br>ليوم ميلادك الحلو مثلك تماماً! 🌸💝',
+        screen6_text3: 'نختتم احتفالك الآن...<br>وإلى اللقاء في عيد ميلادك القادم! 💫',
+        screen6_title: 'كل عام وأنتِ بخير جوري!',
+        screen6_subtitle: 'İyi ki doğdun Jouri! 💕',
+        screen6_button: 'إعادة الجولة من البداية 🔄'
+      },
+      tr: {
+        langButtonText: '🇸🇦 عربي',
+        screen1_welcome: 'Merhaba tatlı {name}! 🌹<br>Ben doğum günü ayıcığıyım<br>Senin için özel yapıldım! 💝',
+        screen1_button: 'Geziye Başla ✨',
+        screen2_text: 'Senin için özel yapılmış<br>bir kafeye gideceğiz! ☕💕<br>Maceraya hazır ol!',
+        screen2_button: 'Hadi gidelim Jouri! 🚀',
+        screen3_title: "Jouri'nin Kafesi",
+        screen3_subtitle: 'مقهى جوري ☕',
+        screen3_welcome: "Jouri'nin Kafesine hoş geldin! 🎉<br>En sevdiğin içeceği seç 💕",
+        screen3_tea: 'Çay',
+        screen3_coffee: 'Kahve',
+        screen3_matcha: 'Matcha',
+        screen3_tea_sub: 'شاي',
+        screen3_coffee_sub: 'قهوة',
+        screen3_matcha_sub: 'ماتشا',
+        screen3_selected: 'Seçtin:',
+        screen3_button: 'İleri ✨',
+        screen4_text: 'Harika! İçeceğini seçtin 🥰<br>Şimdi seni seven arkadaşlarının<br>mesajlarını okumaya gidelim! 💌',
+        screen4_button: 'Haydi tebrikler keşfedelim! 💝',
+        screen5_title: 'Sevdiklerinden Mesajlar 💌',
+        screen5_subtitle: 'Mesajları okumak için zarflara tıkla',
+        screen5_from: '-den',
+        screen5_click: 'Mesajı okumak için tıkla 💌',
+        screen5_button: 'İleri ✨',
+        screen6_text1: 'Bunlar sevdiklerinin mesajlarıydı Jouri! 🎁',
+        screen6_text2: 'Bu güzel gün vesilesiyle<br>ben de sana en güzel dilekleri sunuyorum<br>Senin kadar tatlı doğum günün için! 🌸💝',
+        screen6_text3: 'Kutlamayı şimdi bitiriyoruz...<br>Gelecek doğum gününde görüşmek üzere! 💫',
+        screen6_title: 'İyi ki doğdun Jouri!',
+        screen6_subtitle: 'كل عام وأنتِ بخير جوري! 💕',
+        screen6_button: 'Baştan Başla 🔄'
+      }
+    };
+    
+    function toggleLanguage() {
+      currentLang = currentLang === 'ar' ? 'tr' : 'ar';
+      document.documentElement.setAttribute('lang', currentLang);
+      document.documentElement.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+      updateAllText();
+    }
+    
+    function updateAllText() {
+      const t = translations[currentLang];
+      const name = config.birthday_name || defaultConfig.birthday_name;
+      
+      document.getElementById('lang-button-text').textContent = t.langButtonText;
+      document.getElementById('welcome-text').innerHTML = t.screen1_welcome.replace('{name}', name);
+      document.getElementById('screen1-button').textContent = t.screen1_button;
+      document.getElementById('screen2-text').innerHTML = t.screen2_text;
+      document.getElementById('screen2-button').textContent = t.screen2_button;
+      document.getElementById('screen3-title').textContent = t.screen3_title;
+      document.getElementById('screen3-subtitle').textContent = t.screen3_subtitle;
+      document.getElementById('screen3-welcome').innerHTML = t.screen3_welcome;
+      document.getElementById('screen3-tea').textContent = t.screen3_tea;
+      document.getElementById('screen3-coffee').textContent = t.screen3_coffee;
+      document.getElementById('screen3-matcha').textContent = t.screen3_matcha;
+      document.getElementById('screen3-tea-sub').textContent = t.screen3_tea_sub;
+      document.getElementById('screen3-coffee-sub').textContent = t.screen3_coffee_sub;
+      document.getElementById('screen3-matcha-sub').textContent = t.screen3_matcha_sub;
+      document.getElementById('screen3-selected-label').textContent = t.screen3_selected;
+      document.getElementById('screen3-button').textContent = t.screen3_button;
+      document.getElementById('screen4-text').innerHTML = t.screen4_text;
+      document.getElementById('screen4-button').textContent = t.screen4_button;
+      document.getElementById('screen5-title').textContent = t.screen5_title;
+      document.getElementById('screen5-subtitle').textContent = t.screen5_subtitle;
+      document.querySelectorAll('.envelope-from').forEach(el => {
+        const sender = el.getAttribute('data-sender');
+        el.textContent = t.screen5_from + ' ' + sender;
+      });
+      document.querySelectorAll('.envelope-click').forEach(el => {
+        el.textContent = t.screen5_click;
+      });
+      document.getElementById('screen5-button').textContent = t.screen5_button;
+      document.getElementById('screen6-text1').textContent = t.screen6_text1;
+      document.getElementById('screen6-text2').innerHTML = t.screen6_text2;
+      document.getElementById('screen6-text3').innerHTML = t.screen6_text3;
+      document.getElementById('screen6-title').textContent = t.screen6_title;
+      document.getElementById('screen6-subtitle').textContent = t.screen6_subtitle;
+      document.getElementById('screen6-button').textContent = t.screen6_button;
+    }
+    
+    function goToScreen(num) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById('screen' + num).classList.add('active');
+      
+      if (num === 6) {
+        createConfetti();
+      }
+    }
+    
+    function selectDrink(drink) {
+      document.getElementById('drink-name').textContent = drink;
+      document.getElementById('selected-drink').classList.remove('hidden');
+      document.getElementById('selected-drink').classList.add('slide-up');
+    }
+    
+    function openEnvelope(num) {
+      const card = event.currentTarget;
+      const letter = document.getElementById('letter' + num);
+      const overlay = document.getElementById('envelopeOverlay');
+      
+      if (card.classList.contains('opening')) {
+        closeEnvelope();
+        return;
+      }
+      
+      document.querySelectorAll('.envelope-card').forEach(c => {
+        c.classList.remove('opening');
+      });
+      document.querySelectorAll('.letter-content').forEach(l => {
+        l.classList.remove('letter-open');
+      });
+      
+      overlay.classList.add('active');
+      card.classList.add('opening');
+      
+      setTimeout(() => {
+        letter.classList.add('letter-open');
+      }, 300);
+    }
+    
+    function closeEnvelope() {
+      const overlay = document.getElementById('envelopeOverlay');
+      overlay.classList.remove('active');
+      
+      document.querySelectorAll('.envelope-card').forEach(c => {
+        c.classList.remove('opening');
+      });
+      document.querySelectorAll('.letter-content').forEach(l => {
+        l.classList.remove('letter-open');
+      });
+    }
+    
+    function createConfetti() {
+      const container = document.getElementById('confetti-container');
+      const colors = ['#ffb6c1', '#ffc0cb', '#ff69b4', '#ffb3d9', '#ffc4dd', '#ffd4e5', '#ffe4ed', '#fff0f5'];
+      
+      for (let i = 0; i < 60; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti-piece';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDelay = Math.random() * 3 + 's';
+        confetti.style.animationDuration = (3 + Math.random() * 2) + 's';
+        confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+        confetti.style.width = (8 + Math.random() * 6) + 'px';
+        confetti.style.height = (8 + Math.random() * 6) + 'px';
+        container.appendChild(confetti);
+      }
+      
+      setTimeout(() => {
+        container.innerHTML = '';
+      }, 8000);
+    }
+    
+    function restartJourney() {
+      document.getElementById('selected-drink').classList.add('hidden');
+      document.querySelectorAll('.letter-content').forEach(l => l.classList.remove('letter-open'));
+      document.querySelectorAll('.envelope-card').forEach(e => e.classList.remove('opening'));
+      document.getElementById('envelopeOverlay').classList.remove('active');
+      goToScreen(1);
+    }
+    
+    async function onConfigChange(newConfig) {
+      config = { ...defaultConfig, ...newConfig };
+      updateAllText();
+    }
+    
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+    
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ['birthday_name', config.birthday_name || defaultConfig.birthday_name]
+      ]);
+    }
+    
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9bddf75366c7ccd4',t:'MTc2ODQwMjQ0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
